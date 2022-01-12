@@ -1,0 +1,128 @@
+{
+  "a_galaxy_workflow" : "true",
+  "annotation" : "",
+  "format-version" : "0.1",
+  "name" : "hacky workflow",
+  "steps" : {
+    "0" : {
+      "workflow_outputs" : [ {
+        "label" : null,
+        "output_name" : "output",
+        "uuid" : "cdcff326-f0ce-4369-b969-a333b2b0c5fe"
+      } ],
+      "input_connections" : { },
+      "label" : "sequence reads paired",
+      "id" : 0,
+      "tool_state" : "{\"optional\": false, \"collection_type\": \"list:paired\"}",
+      "errors" : null,
+      "position" : {
+        "bottom" : 306.1999969482422,
+        "height" : 82.19999694824219,
+        "left" : 740,
+        "right" : 940,
+        "top" : 224,
+        "width" : 200,
+        "x" : 740,
+        "y" : 224
+      },
+      "name" : "Input dataset collection",
+      "uuid" : "77e205cb-7190-4897-b840-c8492d610a84",
+      "outputs" : [ ],
+      "type" : "data_collection_input",
+      "tool_version" : null,
+      "annotation" : "",
+      "inputs" : [ {
+        "description" : "",
+        "name" : "sequence reads paired"
+      } ],
+      "content_id" : null,
+      "tool_id" : null
+    },
+    "1" : {
+      "workflow_outputs" : [ {
+        "label" : null,
+        "output_name" : "output",
+        "uuid" : "7cdb8ca5-6e91-4a02-a85e-2ae8a7da6d56"
+      } ],
+      "input_connections" : { },
+      "label" : null,
+      "id" : 1,
+      "tool_state" : "{\"input\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+      "errors" : null,
+      "position" : {
+        "bottom" : 551.8000030517578,
+        "height" : 61.80000305175781,
+        "left" : 818,
+        "right" : 1018,
+        "top" : 490,
+        "width" : 200,
+        "x" : 818,
+        "y" : 490
+      },
+      "name" : "echo",
+      "uuid" : "479c4c1b-2be8-4bc8-96d0-d0c3af1df42d",
+      "outputs" : [ {
+        "name" : "output",
+        "type" : "expression.json"
+      } ],
+      "type" : "tool",
+      "tool_version" : "0.1.0",
+      "annotation" : "",
+      "inputs" : [ ],
+      "post_job_actions" : { },
+      "content_id" : "echo_tool_1",
+      "tool_id" : "echo_tool_1"
+    },
+    "2" : {
+      "workflow_outputs" : [ {
+        "label" : "weather",
+        "output_name" : "weather",
+        "uuid" : "64c44a76-d0b0-4117-b49c-210f7e5770c8"
+      } ],
+      "input_connections" : {
+        "city" : {
+          "id" : 1,
+          "output_name" : "output"
+        }
+      },
+      "label" : null,
+      "id" : 2,
+      "tool_state" : "{\"city\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+      "errors" : null,
+      "position" : {
+        "bottom" : 584.1999969482422,
+        "height" : 93.19999694824219,
+        "left" : 1131,
+        "right" : 1331,
+        "top" : 491,
+        "width" : 200,
+        "x" : 1131,
+        "y" : 491
+      },
+      "name" : "weather",
+      "uuid" : "cf454cf7-fde3-4201-a716-5d406def7e82",
+      "outputs" : [ {
+        "name" : "weather",
+        "type" : "txt"
+      } ],
+      "type" : "tool",
+      "tool_version" : "0.1.0",
+      "annotation" : "",
+      "inputs" : [ ],
+      "post_job_actions" : {
+        "RenameDatasetActionweather" : {
+          "action_arguments" : {
+            "newname" : "weather.txt"
+          },
+          "action_type" : "RenameDatasetAction",
+          "output_name" : "weather"
+        }
+      },
+      "content_id" : "weather_tool_1",
+      "tool_id" : "weather_tool_1"
+    }
+  },
+  "tags" : [ "weather" ],
+  "uuid" : "3dbe8417-96bc-4ae9-bfa1-b8edadfd2fd0",
+  "version" : 1
+}
