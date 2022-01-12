@@ -9,7 +9,7 @@ Feel free to fork this repo, play around and suggest improvements
 ## How to use
 * Make sure docker is installed and docker-compose is available from your terminal
 * Clone this repo
-* run `docker-compose up -d` from repository root
+* run `docker-compose up -d --build` from repository root
 
 > :warning: **the path matters**: this deployment uses a .env file. While docker-compose allows you to perform actions in sub-directries, the .env file will not be found from there
 
