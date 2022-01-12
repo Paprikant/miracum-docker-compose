@@ -1,0 +1,15 @@
+<tool id="weather_tool_1" name="weather" version="0.1.0">
+  <description>get weather at a location</description>
+  <command>bash '${__tool_directory__}/weatherTool.sh' '$city' > '$weather'</command>
+  <inputs>
+    <param name="city" type="text"/>
+  </inputs>
+  <outputs>
+    <data format="txt" name="weather" label="weather in ${city}"/>
+  </outputs>
+
+  <help>
+	  Uses wttr.in to retrieve the current weather.
+	  If no city is given, wttr.in guesses the location based on IP.
+  </help>
+</tool>

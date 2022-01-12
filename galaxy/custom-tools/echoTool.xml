@@ -1,0 +1,15 @@
+<tool id="echo_tool_1" name="echo" version="0.1.0">
+  <description>it is literally just echo</description>
+  <command>bash '${__tool_directory__}/echoTool.sh' '$input' > '$output'</command>
+  <inputs>
+    <param name="input" type="text"/>
+  </inputs>
+  <outputs>
+    <output type="text" name="output"/>
+  </outputs>
+
+  <help>
+	This tool allows usage of a tool parameter to provide inputs to a workflow.
+	It is to be used when simple workflow inputs are not supportet - looking at you IRIDA.
+  </help>
+</tool>

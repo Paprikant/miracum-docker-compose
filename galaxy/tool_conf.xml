@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<toolbox monitor="true">
+ <section name="customTools" id="cTools">
+    <tool file="custom-tools/echoTool.xml" />
+    <tool file="custom-tools/weatherTool.xml" />
+ </section>
+ </toolbox>
+

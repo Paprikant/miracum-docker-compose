@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iridaWorkflow>
+  <id>24b95252-08c0-4e6d-96d8-8845148f7cf4</id>
+  <name>miracum</name>
+  <version>0.1.0</version>
+  <analysisType>MIRACUM</analysisType>
+  <inputs>
+    <sequenceReadsPaired>samples</sequenceReadsPaired>
+    <requiresSingleSample>false</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter name="identifier_normal_sample" defaultValue="normal">
+      <toolParameter toolId="0f4b431e-2217-4b65-b404-3e07c6c95a79" parameterName="components.0.component_value"/>
+    </parameter>
+    <parameter name="identifier_tumor_sample" defaultValue="normal">
+      <toolParameter toolId="f07bf686-f9d3-46c0-b1ba-7c891c5c19e6" parameterName="components.0.component_value"/>
+    </parameter>
+  </parameters>
+  <outputs/>
+  <toolRepositories>
+    <repository>
+      <name>compose_text_param</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>e188c9826e0f</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>

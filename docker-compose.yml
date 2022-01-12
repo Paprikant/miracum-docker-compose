@@ -1,0 +1,78 @@
+version: "2"
+
+services:
+  landingpage:
+    image: nginx
+    volumes:
+      - ./landingpage:/usr/share/nginx/html:ro
+
+    ports:
+      - 80:80
+
+  # galaxy container
+  #
+  galaxy:
+    build: galaxy
+
+    ports:
+      - "8080:80"
+      - "8021:21"
+      - "8022:22"
+
+    environment:
+      GALAXY_DEFAULT_ADMIN_USER: ${GALAXY_ADMIN_USER}
+      GALAXY_DEFAULT_ADMIN_EMAIL: ${GALAXY_ADMIN_EMAIL}
+      GALAXY_DEFAULT_ADMIN_KEY: ${GALAXY_ADMIN_KEY}
+      GALAXY_DEFAULT_ADMIN_PASSWORD: ${GALAXY_ADMIN_PASSWORD}
+
+    volumes:
+      # persist galaxy data in a volume
+      # use `docker-compose down -v` to reset galaxy
+      - "galaxy_data:/export"
+      # shared volume to access files uploaded to IRIDA
+      - "irida_user_data:/opt/irida/data"
+
+  irida-web:
+    build: irida/
+
+    ports:
+      - "8085:8080"
+
+    environment:
+      # configuration for database access
+      IRIDA_DATABASE_USER: ${IRIDA_DATABASE_USER}
+      IRIDA_DATABASE_PASS: ${IRIDA_DATABASE_PASS}
+      IRIDA_DATABASE_NAME: ${IRIDA_DATABASE_NAME}
+      IRIDA_GALAXY_USER: ${GALAXY_ADMIN_EMAIL}
+      IRIDA_GALAXY_KEY: ${GALAXY_ADMIN_KEY}
+
+    volumes:
+      # volume to share data with galaxy
+      - "irida_user_data:/opt/irida/data"
+      - ./irida/plugin/miracum-plugin/target/miracum-plugin-0.1.0-SNAPSHOT.jar:/etc/irida/plugins/miracum-plugin-0.1.0-SNAPSHOT.jar
+      - ./irida/plugin/weather-plugin/target/weather-plugin-0.1.0-SNAPSHOT.jar:/etc/irida/plugins/weather-plugin-0.1.0-SNAPSHOT.jar
+
+  irida-db:
+    image: mariadb
+    environment:
+      # configuration for IRIDA database
+      MARIADB_USER:     ${IRIDA_DATABASE_USER}
+      MARIADB_PASSWORD: ${IRIDA_DATABASE_PASS}
+      MARIADB_DATABASE: ${IRIDA_DATABASE_NAME}
+
+      # set random root password
+      # the "yes" has no meaning as this env variable just needs to be present
+      #
+      # to get root access set "MARIADB_ROOT_PASSWORD" instead
+      MARIADB_RANDOM_ROOT_PASSWORD: "yes"
+    volumes:
+      - irida_data:/var/lib/mysql
+
+volumes:
+  galaxy_data:
+  # mounted to /export in galaxy container
+  # will contain galaxy database, shed tools, dependencies and config scripts
+  irida_data:
+
+  irida_user_data:
+

@@ -1,0 +1,367 @@
+{
+  "a_galaxy_workflow" : "true",
+  "annotation" : "",
+  "format-version" : "0.1",
+  "name" : "miracum",
+  "steps" : {
+    "3" : {
+      "workflow_outputs" : [ {
+        "label" : "input dataset(s) (extracted element)",
+        "output_name" : "output",
+        "uuid" : "997ff223-6c15-4832-bea3-e80fea75e5e8"
+      } ],
+      "input_connections" : {
+        "input" : {
+          "id" : 0,
+          "output_name" : "output"
+        }
+      },
+      "label" : "key \"tumor\"",
+      "id" : 3,
+      "tool_state" : "{\"input\": {\"__class__\": \"ConnectedValue\"}, \"which\": {\"which_dataset\": \"by_identifier\", \"__current_case__\": 1, \"identifier\": \"normal\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+      "errors" : null,
+      "position" : {
+        "bottom" : 96.60000610351562,
+        "height" : 113.60000610351562,
+        "left" : 655,
+        "right" : 855,
+        "top" : -17,
+        "width" : 200,
+        "x" : 655,
+        "y" : -17
+      },
+      "name" : "Extract Dataset",
+      "uuid" : "f79fbb0b-25ac-4acc-850e-aa0d5cc3e849",
+      "outputs" : [ {
+        "name" : "output",
+        "type" : "data"
+      } ],
+      "type" : "tool",
+      "tool_version" : "1.0.0",
+      "annotation" : "",
+      "inputs" : [ ],
+      "post_job_actions" : { },
+      "content_id" : "__EXTRACT_DATASET__",
+      "tool_id" : "__EXTRACT_DATASET__"
+    },
+    "4" : {
+      "workflow_outputs" : [ {
+        "label" : "input dataset(s) (extracted element)",
+        "output_name" : "output",
+        "uuid" : "f994d2ab-21e8-4c3e-801c-90ed808c15a4"
+      } ],
+      "input_connections" : {
+        "input" : {
+          "id" : 0,
+          "output_name" : "output"
+        }
+      },
+      "label" : "key \"normal\"",
+      "id" : 4,
+      "tool_state" : "{\"input\": {\"__class__\": \"ConnectedValue\"}, \"which\": {\"which_dataset\": \"by_identifier\", \"__current_case__\": 1, \"identifier\": \"tumor\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+      "errors" : null,
+      "position" : {
+        "bottom" : 765.6000061035156,
+        "height" : 113.60000610351562,
+        "left" : 653,
+        "right" : 853,
+        "top" : 652,
+        "width" : 200,
+        "x" : 653,
+        "y" : 652
+      },
+      "name" : "Extract Dataset",
+      "uuid" : "a55f680e-0b23-4c5e-be63-f19c13c0d23e",
+      "outputs" : [ {
+        "name" : "output",
+        "type" : "data"
+      } ],
+      "type" : "tool",
+      "tool_version" : "1.0.0",
+      "annotation" : "",
+      "inputs" : [ ],
+      "post_job_actions" : { },
+      "content_id" : "__EXTRACT_DATASET__",
+      "tool_id" : "__EXTRACT_DATASET__"
+    },
+    "8" : {
+      "workflow_outputs" : [ {
+        "label" : "input dataset(s) (extracted element)",
+        "output_name" : "output",
+        "uuid" : "43dc02d8-a0ce-4316-8354-a4446d5071d7"
+      } ],
+      "input_connections" : {
+        "input" : {
+          "id" : 4,
+          "output_name" : "output"
+        }
+      },
+      "label" : "normal index 0",
+      "id" : 8,
+      "tool_state" : "{\"input\": {\"__class__\": \"ConnectedValue\"}, \"which\": {\"which_dataset\": \"by_index\", \"__current_case__\": 2, \"index\": \"0\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+      "errors" : null,
+      "position" : {
+        "bottom" : 853.6000061035156,
+        "height" : 113.60000610351562,
+        "left" : 975,
+        "right" : 1175,
+        "top" : 740,
+        "width" : 200,
+        "x" : 975,
+        "y" : 740
+      },
+      "name" : "Extract Dataset",
+      "uuid" : "2ac4af3d-b49b-4983-8e44-093ba9bd8ba5",
+      "outputs" : [ {
+        "name" : "output",
+        "type" : "data"
+      } ],
+      "type" : "tool",
+      "tool_version" : "1.0.0",
+      "annotation" : "",
+      "inputs" : [ ],
+      "post_job_actions" : { },
+      "content_id" : "__EXTRACT_DATASET__",
+      "tool_id" : "__EXTRACT_DATASET__"
+    },
+    "7" : {
+      "workflow_outputs" : [ {
+        "label" : "input dataset(s) (extracted element)",
+        "output_name" : "output",
+        "uuid" : "3cc88c63-aafe-4e51-bba5-a969fe9b31ff"
+      } ],
+      "input_connections" : {
+        "input" : {
+          "id" : 4,
+          "output_name" : "output"
+        }
+      },
+      "label" : "normal index 1",
+      "id" : 7,
+      "tool_state" : "{\"input\": {\"__class__\": \"ConnectedValue\"}, \"which\": {\"which_dataset\": \"by_index\", \"__current_case__\": 2, \"index\": \"1\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+      "errors" : null,
+      "position" : {
+        "bottom" : 664.6000061035156,
+        "height" : 113.60000610351562,
+        "left" : 978,
+        "right" : 1178,
+        "top" : 551,
+        "width" : 200,
+        "x" : 978,
+        "y" : 551
+      },
+      "name" : "Extract Dataset",
+      "uuid" : "7949d05a-812c-4978-bdf1-b23d815cc485",
+      "outputs" : [ {
+        "name" : "output",
+        "type" : "data"
+      } ],
+      "type" : "tool",
+      "tool_version" : "1.0.0",
+      "annotation" : "",
+      "inputs" : [ ],
+      "post_job_actions" : { },
+      "content_id" : "__EXTRACT_DATASET__",
+      "tool_id" : "__EXTRACT_DATASET__"
+    },
+    "5" : {
+      "workflow_outputs" : [ {
+        "label" : "input dataset(s) (extracted element)",
+        "output_name" : "output",
+        "uuid" : "3b29426b-a3d7-42bb-912a-c114f5e0465b"
+      } ],
+      "input_connections" : {
+        "input" : {
+          "id" : 3,
+          "output_name" : "output"
+        }
+      },
+      "label" : "tumor index 0",
+      "id" : 5,
+      "tool_state" : "{\"input\": {\"__class__\": \"ConnectedValue\"}, \"which\": {\"which_dataset\": \"by_index\", \"__current_case__\": 2, \"index\": \"0\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+      "errors" : null,
+      "position" : {
+        "bottom" : 2.600006103515625,
+        "height" : 113.60000610351562,
+        "left" : 962,
+        "right" : 1162,
+        "top" : -111,
+        "width" : 200,
+        "x" : 962,
+        "y" : -111
+      },
+      "name" : "Extract Dataset",
+      "uuid" : "24855a0e-d9ab-48a1-85fe-09152a91c2f6",
+      "outputs" : [ {
+        "name" : "output",
+        "type" : "data"
+      } ],
+      "type" : "tool",
+      "tool_version" : "1.0.0",
+      "annotation" : "",
+      "inputs" : [ ],
+      "post_job_actions" : { },
+      "content_id" : "__EXTRACT_DATASET__",
+      "tool_id" : "__EXTRACT_DATASET__"
+    },
+    "6" : {
+      "workflow_outputs" : [ {
+        "label" : "input dataset(s) (extracted element)",
+        "output_name" : "output",
+        "uuid" : "54e276df-e57b-4190-8c73-b48384e59f89"
+      } ],
+      "input_connections" : {
+        "input" : {
+          "id" : 3,
+          "output_name" : "output"
+        }
+      },
+      "label" : "tumor index 1",
+      "id" : 6,
+      "tool_state" : "{\"input\": {\"__class__\": \"ConnectedValue\"}, \"which\": {\"which_dataset\": \"by_index\", \"__current_case__\": 2, \"index\": \"1\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+      "errors" : null,
+      "position" : {
+        "bottom" : 181.60000610351562,
+        "height" : 113.60000610351562,
+        "left" : 970,
+        "right" : 1170,
+        "top" : 68,
+        "width" : 200,
+        "x" : 970,
+        "y" : 68
+      },
+      "name" : "Extract Dataset",
+      "uuid" : "446facfc-afcd-4854-8072-afdbbe950d4a",
+      "outputs" : [ {
+        "name" : "output",
+        "type" : "data"
+      } ],
+      "type" : "tool",
+      "tool_version" : "1.0.0",
+      "annotation" : "",
+      "inputs" : [ ],
+      "post_job_actions" : { },
+      "content_id" : "__EXTRACT_DATASET__",
+      "tool_id" : "__EXTRACT_DATASET__"
+    },
+    "1" : {
+      "workflow_outputs" : [ {
+        "label" : null,
+        "output_name" : "out1",
+        "uuid" : "5288bf76-ee16-4ba1-b415-ab4889253468"
+      } ],
+      "input_connections" : { },
+      "label" : "input sample identifier for normal",
+      "id" : 1,
+      "tool_state" : "{\"components\": [{\"__index__\": 0, \"param_type\": {\"select_param_type\": \"text\", \"__current_case__\": 0, \"component_value\": \"\"}}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+      "errors" : null,
+      "position" : {
+        "bottom" : 351.1999969482422,
+        "height" : 82.19999694824219,
+        "left" : 717,
+        "right" : 917,
+        "top" : 269,
+        "width" : 200,
+        "x" : 717,
+        "y" : 269
+      },
+      "name" : "Compose text parameter value",
+      "uuid" : "0f4b431e-2217-4b65-b404-3e07c6c95a79",
+      "outputs" : [ {
+        "name" : "out1",
+        "type" : "expression.json"
+      } ],
+      "tool_shed_repository" : {
+        "changeset_revision" : "e188c9826e0f",
+        "name" : "compose_text_param",
+        "owner" : "iuc",
+        "tool_shed" : "toolshed.g2.bx.psu.edu"
+      },
+      "type" : "tool",
+      "tool_version" : "0.1.1",
+      "annotation" : "",
+      "inputs" : [ ],
+      "post_job_actions" : { },
+      "content_id" : "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+      "tool_id" : "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1"
+    },
+    "0" : {
+      "workflow_outputs" : [ {
+        "label" : null,
+        "output_name" : "output",
+        "uuid" : "26a672ff-f91c-4716-ba19-928302d7752c"
+      } ],
+      "input_connections" : { },
+      "label" : "samples",
+      "id" : 0,
+      "tool_state" : "{\"optional\": false, \"collection_type\": \"list:paired\"}",
+      "errors" : null,
+      "position" : {
+        "bottom" : 335.8000030517578,
+        "height" : 61.80000305175781,
+        "left" : 388,
+        "right" : 588,
+        "top" : 274,
+        "width" : 200,
+        "x" : 388,
+        "y" : 274
+      },
+      "name" : "Input dataset collection",
+      "uuid" : "af34b3b4-b386-4863-a4be-bd0438fd70b2",
+      "outputs" : [ ],
+      "type" : "data_collection_input",
+      "tool_version" : null,
+      "annotation" : "",
+      "inputs" : [ {
+        "description" : "",
+        "name" : "samples"
+      } ],
+      "content_id" : null,
+      "tool_id" : null
+    },
+    "2" : {
+      "workflow_outputs" : [ {
+        "label" : null,
+        "output_name" : "out1",
+        "uuid" : "174ea389-e42d-47d5-ab6f-dba7aed6bb77"
+      } ],
+      "input_connections" : { },
+      "label" : "input sample identifier for tumor",
+      "id" : 2,
+      "tool_state" : "{\"components\": [{\"__index__\": 0, \"param_type\": {\"select_param_type\": \"text\", \"__current_case__\": 0, \"component_value\": \"\"}}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+      "errors" : null,
+      "position" : {
+        "bottom" : 503.1999969482422,
+        "height" : 82.19999694824219,
+        "left" : 706,
+        "right" : 906,
+        "top" : 421,
+        "width" : 200,
+        "x" : 706,
+        "y" : 421
+      },
+      "name" : "Compose text parameter value",
+      "uuid" : "f07bf686-f9d3-46c0-b1ba-7c891c5c19e6",
+      "outputs" : [ {
+        "name" : "out1",
+        "type" : "expression.json"
+      } ],
+      "tool_shed_repository" : {
+        "changeset_revision" : "e188c9826e0f",
+        "name" : "compose_text_param",
+        "owner" : "iuc",
+        "tool_shed" : "toolshed.g2.bx.psu.edu"
+      },
+      "type" : "tool",
+      "tool_version" : "0.1.1",
+      "annotation" : "",
+      "inputs" : [ ],
+      "post_job_actions" : { },
+      "content_id" : "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+      "tool_id" : "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1"
+    }
+  },
+  "tags" : [ ],
+  "uuid" : "e7a21340-2472-44d6-ab3f-85fbec95884c",
+  "version" : 5
+}
