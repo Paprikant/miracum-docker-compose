@@ -1,0 +1,4 @@
+META-INF/extensions.idx
+ca/corefacility/bioinformatics/irida/plugins/WeatherPlugin$PluginInfo.class
+ca/corefacility/bioinformatics/irida/plugins/WeatherPluginUpdater.class
+ca/corefacility/bioinformatics/irida/plugins/WeatherPlugin.class

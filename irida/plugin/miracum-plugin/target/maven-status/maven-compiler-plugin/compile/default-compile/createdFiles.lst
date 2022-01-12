@@ -1,0 +1,4 @@
+META-INF/extensions.idx
+ca/corefacility/bioinformatics/irida/plugins/MiracumPluginUpdater.class
+ca/corefacility/bioinformatics/irida/plugins/MiracumPlugin$PluginInfo.class
+ca/corefacility/bioinformatics/irida/plugins/MiracumPlugin.class

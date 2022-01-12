@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iridaWorkflow>
+  <id>b90bb9e8-f286-4073-8802-a4c0db074451</id>
+  <name>hackyworkflow</name>
+  <version>0.1.0</version>
+  <analysisType>DEMO</analysisType>
+  <inputs>
+    <sequenceReadsPaired>sequence reads paired</sequenceReadsPaired>
+    <requiresSingleSample>false</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter name="city" defaultValue="Freiburg">
+      <toolParameter toolId="479c4c1b-2be8-4bc8-96d0-d0c3af1df42d" parameterName="input"/>
+    </parameter>
+  </parameters>
+  <outputs>
+    <output name="weather.txt" fileName="weather.txt"/>
+  </outputs>
+  <toolRepositories/>
+</iridaWorkflow>
