@@ -22,7 +22,7 @@ Feel free to fork this repo, play around and suggest improvements
 
 ### galaxy
 * galaxy is available at **port** `8080`
-* the galaxy admin credentials are set to **user** `admin`, **email** `admin@galaxy.local` and **password** `password1`
+* the galaxy admin credentials are set to **user** `irida`, **email** `irida@galaxy.local` and **password** `password1`
 > :warning: **changing galaxy admin password**: the password can be changed in .env, but this should be done before the galaxy container first started.
 
 ## Data
