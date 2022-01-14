@@ -46,6 +46,10 @@ services:
       IRIDA_GALAXY_USER: ${GALAXY_ADMIN_EMAIL}
       IRIDA_GALAXY_KEY: ${GALAXY_ADMIN_KEY}
 
+    # user ID of the galaxy user and group hard-coded in the galaxy image
+    # using the same user to make sure galaxy has access to all data irida writes
+    user: "1450:1450"
+
     volumes:
       # volume to share data with galaxy
       - "irida_user_data:/opt/irida/data"
