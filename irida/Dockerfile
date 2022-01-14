@@ -40,4 +40,4 @@ COPY --from=source-download /irida-21.09.1.war /usr/local/tomcat/webapps/ROOT.wa
 
 # add new entrypoint
 ADD docker-entrypoint.sh /docker-entrypoint.sh
-ENTRYPOINT /docker-entrypoint.sh
+CMD [ "/docker-entrypoint.sh" ]
